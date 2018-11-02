@@ -685,7 +685,7 @@ static std::string FormatException(const std::exception* pex, const char* pszThr
     char pszModule[MAX_PATH] = "";
     GetModuleFileNameA(nullptr, pszModule, sizeof(pszModule));
 #else
-    const char* pszModule = "bitcoin";
+    const char* pszModule = "bitcoinextra";
 #endif
     if (pex)
         return strprintf(
@@ -710,7 +710,7 @@ fs::path GetDefaultDataDir()
     // Unix: ~/.bitcoin
 #ifdef WIN32
     // Windows
-    return GetSpecialFolderPath(CSIDL_APPDATA) / "Bitcoin";
+    return GetSpecialFolderPath(CSIDL_APPDATA) / "BitcoinGo";
 #else
     fs::path pathRet;
     char* pszHome = getenv("HOME");
@@ -1223,7 +1223,7 @@ std::string CopyrightHolders(const std::string& strPrefix)
 
     // Check for untranslated substitution to make sure Bitcoin Core copyright is not removed by accident
     if (strprintf(COPYRIGHT_HOLDERS, COPYRIGHT_HOLDERS_SUBSTITUTION).find("Bitcoin Core") == std::string::npos) {
-        strCopyrightHolders += "\n" + strPrefix + "The Bitcoin Core developers";
+        strCopyrightHolders += "\n" + strPrefix + "The BitcoinGo Core developers";
     }
     return strCopyrightHolders;
 }

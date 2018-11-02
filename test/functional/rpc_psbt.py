@@ -24,7 +24,7 @@ class PSBTTest(BitcoinTestFramework):
         self.skip_if_no_wallet()
 
     def run_test(self):
-        # Create and fund a raw tx for sending 10 BTC
+        # Create and fund a raw tx for sending 10 BTCE
         psbtx1 = self.nodes[0].walletcreatefundedpsbt([], {self.nodes[2].getnewaddress():10})['psbt']
 
         # Node 1 should not be able to add anything to it but still return the psbtx same as before
