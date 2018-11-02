@@ -1,11 +1,11 @@
-Bitcoin Core integration/staging tree
+Bitcoin Extra Core integration/staging tree
 =====================================
 
 [![Build Status](https://travis-ci.org/bitcoin/bitcoin.svg?branch=master)](https://travis-ci.org/bitcoin/bitcoin)
 
-https://bitcoincore.org
+https://btcextra.online
 
-What is Bitcoin?
+What is Bitcoin-Extra?
 ----------------
 
 Bitcoin is an experimental digital currency that enables instant payments to
